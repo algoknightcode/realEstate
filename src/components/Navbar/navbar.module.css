@@ -1,0 +1,31 @@
+.outer{
+    height: 76px;
+    width: 100%;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.left{
+    margin-left: 11px;
+}
+
+.left img{
+    width: 95px;
+    height: 76px;
+}
+.right{
+    display: flex;
+    gap:33px;
+    padding-left: 88px;
+    padding-right: 88px;
+}
+
+.right svg:hover {
+    color: #c89b3c;
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+

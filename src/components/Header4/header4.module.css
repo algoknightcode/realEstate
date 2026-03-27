@@ -1,0 +1,65 @@
+/* OUTER */
+.outer {
+    width: 100%;
+    padding: 40px 55px;
+    box-sizing: border-box;
+}
+
+/* TOP */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.top h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #111;
+}
+
+/* ARROWS */
+.arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrowBtn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 1px solid #aaa;
+
+    background: transparent;
+    color: #111;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease;
+}
+
+.arrowBtn:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* BOTTOM */
+.bottom {
+    width: 100%;
+}
+
+.bottom img {
+    width: 100%;
+    height: 615px;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+}

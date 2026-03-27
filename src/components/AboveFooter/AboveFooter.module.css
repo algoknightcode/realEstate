@@ -1,0 +1,77 @@
+/* OUTER */
+.outer {
+    width: 100%;
+    padding: 65px 60px; /* top/bottom white space + side spacing */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* IMAGE */
+.bg {
+    width: 100%;
+    max-width: 1252px;  /* 🔥 control width */
+    height: 420px;      /* 🔥 exact height */
+    object-fit: cover;
+
+    border-radius: 30px;
+}
+
+/* CONTENT (OVERLAY) */
+.content {
+    position: absolute;
+
+    width: 100%;
+    max-width: 1252px;
+    height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* TEXT */
+.content p {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    width: 179px;
+    height: 39px;
+
+    border-radius: 50px;
+    border: none;
+
+    background: white;
+    color: #652828;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+/* ARROW */
+.btn img {
+    width: 16px;
+}
+
+/* HOVER */
+.btn:hover {
+    background: #652828;
+    color: white;
+}

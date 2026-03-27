@@ -1,0 +1,103 @@
+/* OUTER */
+.outer {
+    padding: 80px 88px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* LEFT — heading block at top */
+.left {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 14px 0;
+    line-height: 1.25;
+}
+
+.sub {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* RIGHT — ACCORDION pushed to the right */
+.accordion {
+    margin-left: 40%;
+    border: none;
+}
+
+.item {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.item:first-child {
+    border-top: 1px solid #c8c8c8;
+}
+
+/* QUESTION ROW */
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 4px;
+    cursor: pointer;
+    gap: 16px;
+}
+
+.question span {
+    font-size: 17px;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.4;
+}
+
+/* ICON BUTTON */
+.icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #555;
+    background: transparent;
+    color: #555;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.iconOpen {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+    transform: rotate(180deg);
+}
+
+/* ANSWER */
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 4px;
+}
+
+.answerOpen {
+    max-height: 300px;
+    padding: 0 4px 24px 0;
+}
+
+.answer p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.9;
+    margin: 0;
+}

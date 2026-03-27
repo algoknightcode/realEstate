@@ -1,0 +1,97 @@
+/* OUTER */
+.outer {
+    width: 100%;
+    padding: 80px 100px;
+    background-color: #f5f5f5;
+}
+
+/* TOP */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+/* HEADING */
+.heading {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* SUBHEADING */
+.subheading {
+    width: 50%;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+/* BOTTOM */
+.bottom {
+    display: flex;
+    gap: 50px;
+}
+
+/* LEFT IMAGE */
+.left img {
+    width: 579px;
+    height: 518px;
+    object-fit: cover;
+}
+
+/* RIGHT LIST */
+.right {
+    width: 623px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ITEM */
+.item {
+    width: 623px;
+    height: 132px;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.25s, color 0.25s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.item p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ACTIVE (BLACK BOX) */
+.active {
+    background-color: #111;
+    color: white;
+    border-color: #111;
+}
+
+.active h3 {
+    color: #fff;
+}
+
+.active p {
+    color: #bbb;
+}
