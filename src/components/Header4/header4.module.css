@@ -1,7 +1,7 @@
 /* OUTER */
 .outer {
     width: 100%;
-    padding: 40px 55px;
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 4vw, 3.4375rem);
     box-sizing: border-box;
 }
 
@@ -10,11 +10,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .top h2 {
-    font-size: 32px;
+    font-size: clamp(1.375rem, 2vw + 0.75rem, 2rem);
     font-weight: 400;
     color: #111;
 }
@@ -22,12 +22,12 @@
 /* ARROWS */
 .arrows {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .arrowBtn {
-    width: 42px;
-    height: 42px;
+    width: 2.625rem;
+    height: 2.625rem;
 
     border-radius: 50%;
     border: 1px solid #aaa;
@@ -35,7 +35,7 @@
     background: transparent;
     color: #111;
 
-    font-size: 18px;
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 1.125rem);
     cursor: pointer;
 
     display: flex;
@@ -58,8 +58,27 @@
 
 .bottom img {
     width: 100%;
-    height: 615px;
+    height: clamp(20rem, 43vw, 38.4375rem);
     display: block;
     border-radius: 4px;
     object-fit: cover;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .outer {
+        padding: 1.25rem 1rem;
+    }
+    .top h2 {
+        font-size: 1.25rem;
+    }
+    .arrowBtn {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.875rem;
+    }
+    .bottom img {
+        height: clamp(12rem, 50vw, 18rem);
+        border-radius: 0.5rem;
+    }
 }

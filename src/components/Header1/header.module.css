@@ -11,8 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
-    height: 250px;
+    padding: 0 clamp(1.5rem, 7vw, 6.25rem);
+    min-height: clamp(10rem, 18vw, 15.625rem);
     box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .left h1 {
-    font-size: 48px;
+    font-size: clamp(1.75rem, 3vw + 1rem, 3rem);
     font-weight: 400;
     color: #111;
     line-height: 1.2;
@@ -37,7 +37,7 @@
 .right {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 1.5rem;
 
     align-items: center;
 
@@ -46,24 +46,24 @@
 
 /* TEXT */
 .right p {
-    font-size: 18px;
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 1.125rem);
     color: #333;
     line-height: 1.4;
 }
 
 /* BUTTON */
 .btn {
-    padding: 10px 20px;
+    padding: 0.625em 1.25em;
     border: 1px solid #7b2d26;
     border-radius: 50px;
     background: transparent;
     color: #7b2d26;
     cursor: pointer;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 0.8vw + 0.5rem, 1rem);
 
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5em;
 }
 
 /* HOVER */
@@ -78,6 +78,38 @@
 
 .bottom img {
     width: 100%;
-    height: 640px;
+    height: clamp(20rem, 45vw, 40rem);
     display: block;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1.25rem;
+        min-height: auto;
+        gap: 1.25rem;
+    }
+    .left {
+        max-width: 100%;
+    }
+    .left h1 {
+        font-size: 1.5rem;
+    }
+    .right {
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .right p {
+        font-size: 0.875rem;
+    }
+    .btn {
+        font-size: 0.8125rem;
+    }
+    .bottom img {
+        height: clamp(14rem, 60vw, 22rem);
+    }
 }

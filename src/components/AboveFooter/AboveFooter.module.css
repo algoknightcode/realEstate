@@ -1,7 +1,7 @@
 /* OUTER */
 .outer {
     width: 100%;
-    padding: 65px 60px; /* top/bottom white space + side spacing */
+    padding: clamp(2rem, 5vw, 4.0625rem) clamp(1.5rem, 4vw, 3.75rem);
 
     display: flex;
     justify-content: center;
@@ -15,11 +15,11 @@
 /* IMAGE */
 .bg {
     width: 100%;
-    max-width: 1252px;  /* 🔥 control width */
-    height: 420px;      /* 🔥 exact height */
+    max-width: 78.25rem;
+    height: clamp(15rem, 30vw, 26.25rem);
     object-fit: cover;
 
-    border-radius: 30px;
+    border-radius: 1.875rem;
 }
 
 /* CONTENT (OVERLAY) */
@@ -27,8 +27,8 @@
     position: absolute;
 
     width: 100%;
-    max-width: 1252px;
-    height: 420px;
+    max-width: 78.25rem;
+    height: clamp(15rem, 30vw, 26.25rem);
 
     display: flex;
     flex-direction: column;
@@ -41,15 +41,15 @@
 
 /* TEXT */
 .content p {
-    font-size: 40px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    letter-spacing: 0.125rem;
+    margin-bottom: 1.25rem;
 }
 
 /* BUTTON */
 .btn {
-    width: 179px;
-    height: 39px;
+    width: clamp(8rem, 12vw, 11.1875rem);
+    height: clamp(2rem, 3vw, 2.4375rem);
 
     border-radius: 50px;
     border: none;
@@ -60,18 +60,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
 
     cursor: pointer;
 }
 
 /* ARROW */
 .btn img {
-    width: 16px;
+    width: 1rem;
 }
 
 /* HOVER */
 .btn:hover {
     background: #652828;
     color: white;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .outer {
+        padding: 1.5rem 1rem;
+    }
+    .bg {
+        height: clamp(10rem, 45vw, 16rem);
+        border-radius: 1rem;
+    }
+    .content {
+        height: clamp(10rem, 45vw, 16rem);
+    }
+    .content p {
+        font-size: 1.125rem;
+        padding: 0 1rem;
+    }
+    .btn {
+        width: 8rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
 }

@@ -1,31 +1,48 @@
 .outer{
-    height: 76px;
+    height: clamp(3.5rem, 7vw, 4.75rem);
     width: 100%;
     background-color: #FAFAFA;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 9px;
+    margin-top: 0.5rem;
 }
 
 .left{
-    margin-left: 11px;
+    margin-left: 0.625rem;
 }
 
 .left img{
-    width: 95px;
-    height: 76px;
+    width: clamp(4rem, 6vw, 5.9375rem);
+    height: clamp(3.5rem, 7vw, 4.75rem);
 }
 .right{
     display: flex;
-    gap:33px;
-    padding-left: 88px;
-    padding-right: 88px;
+    gap: clamp(1rem, 2.5vw, 2.0625rem);
+    padding-left: clamp(1.5rem, 6vw, 5.5rem);
+    padding-right: clamp(1.5rem, 6vw, 5.5rem);
 }
 
 .right svg:hover {
     color: #c89b3c;
     transform: scale(1.15);
     transition: 0.2s;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .outer {
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+    .left img {
+        width: 4rem;
+        height: 3.5rem;
+    }
+    .right {
+        gap: 1.25rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
