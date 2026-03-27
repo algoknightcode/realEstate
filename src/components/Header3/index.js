@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './header3.module.css';
 import { building, header1 } from "../../assets";
 

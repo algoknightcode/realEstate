@@ -1,4 +1,3 @@
-import React from "react";
 import CountUp from "react-countup";
 import styles from "./countjs.module.css";
 import { building } from "../../assets";

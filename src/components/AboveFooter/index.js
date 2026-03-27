@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './AboveFooter.module.css';
 import { arrow, aboveFooter } from "../../assets";
 

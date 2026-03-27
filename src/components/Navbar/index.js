@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './navbar.module.css';
 import { logo } from "../../assets";
 import { FaPhoneAlt, FaWhatsapp, FaBars } from "react-icons/fa";
@@ -7,7 +6,7 @@ const Navbar = () =>{
     return(
         <div className={styles.outer}>
             <div className={styles.left}>
-                <img src = {logo }/>
+                <img src={logo} alt="Mansha logo" />
             </div>
             <div className={styles.right}>
                 <FaPhoneAlt size ={20} />

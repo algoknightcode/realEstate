@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './subheader.module.css';
 import { subheader41, subheader42 } from "../../assets";
 
