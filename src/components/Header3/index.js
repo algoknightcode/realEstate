@@ -1,19 +1,21 @@
 import styles from './header3.module.css';
 import { building, header1 } from "../../assets";
+import { useFadeUp, useStaggerUp } from "../../hooks/useGsap";
 
 export const Header3 = () => {
+    const leftRef = useFadeUp();
+    const midRef = useFadeUp({ delay: 0.2 });
+    const cardsRef = useStaggerUp();
     return (
         <div className={styles.outer}>
 
             <div className={styles.top}>
 
-                {/* LEFT */}
-                <div className={styles.left}>
+                <div className={styles.left} ref={leftRef}>
                     <h1>Shaping Dreams <br />Into Masterpieces</h1>
                 </div>
 
-                {/* MIDDLE */}
-                <div className={styles.middle}>
+                <div className={styles.middle} ref={midRef}>
                     At Mansha Group, we are one of the fastest-growing real estate developers in Faridabad, built on a foundation of quality, innovation, and customer satisfaction. We develop thoughtfully designed residential and commercial spaces that reflect modern living, with a strong commitment to timely delivery and reliability.
                 </div>
 
@@ -25,7 +27,7 @@ export const Header3 = () => {
                 </div>
 
             </div>
-            <div className={styles.bottom}>
+            <div className={styles.bottom} ref={cardsRef}>
 
                 <div className={styles.card}>
                     <img src={building} alt="building" />

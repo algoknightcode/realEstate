@@ -1,15 +1,26 @@
 .outer{
     height: clamp(3.5rem, 7vw, 4.75rem);
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5rem;
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.outer:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
 .left{
-    margin-left: 0.625rem;
+    margin-left: 0;
 }
 
 .left img{
@@ -19,14 +30,18 @@
 .right{
     display: flex;
     gap: clamp(1rem, 2.5vw, 2.0625rem);
-    padding-left: clamp(1.5rem, 6vw, 5.5rem);
-    padding-right: clamp(1.5rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+.right svg {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .right svg:hover {
-    color: #c89b3c;
+    color: #7b2d26;
     transform: scale(1.15);
-    transition: 0.2s;
 }
 
 /* ===== MOBILE ===== */

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from './faq.module.css';
+import { useFadeUp } from "../../hooks/useGsap";
 
 const faqs = [
     { q: "What Is Off-Plan Real Estate And Is It Worth Investing In It?", a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
@@ -11,18 +12,19 @@ const faqs = [
 
 const Faq = () => {
     const [openIndex, setOpenIndex] = useState(0);
+    const headRef = useFadeUp();
+    const accRef = useFadeUp({ delay: 0.2 });
 
     return (
         <div className={styles.outer}>
 
             {/* LEFT — heading */}
-            <div className={styles.left}>
+            <div className={styles.left} ref={headRef}>
                 <h2 className={styles.heading}>Frequently Asked Questions</h2>
                 <p className={styles.sub}>If You Have Any Other Questions, Please Email Us.</p>
             </div>
 
-            {/* RIGHT — accordion */}
-            <div className={styles.accordion}>
+            <div className={styles.accordion} ref={accRef}>
                 {faqs.map((faq, i) => (
                     <div
                         key={i}

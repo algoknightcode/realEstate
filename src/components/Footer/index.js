@@ -2,13 +2,16 @@ import styles from './footer.module.css';
 import { FooterImg, logo } from "../../assets";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useFadeUp, useStaggerUp } from "../../hooks/useGsap";
 
 const Footer = () =>{
+    const topRef = useStaggerUp();
+    const disclaimerRef = useFadeUp({ delay: 0.2 });
     return(
         <div className={styles.outer}>
 
             {/* TOP SECTION */}
-            <div className={styles.top}>
+            <div className={styles.top} ref={topRef}>
 
                 {/* LEFT */}
                 <div className={styles.left}>
@@ -71,7 +74,7 @@ const Footer = () =>{
             </div>
 
             {/* DISCLAIMER */}
-            <div className={styles.disclaimer}>
+            <div className={styles.disclaimer} ref={disclaimerRef}>
                 <h2>Disclaimer</h2>
                 <p>
                     Mansha buildcon private limited, a trusted real estate developer, aims to provide accurate project information including pricing, layouts, and availability. However, all details are subject to change without prior notice. Images and amenities shown are for illustration purposes and may vary in actual delivery. We advise all buyers to verify information with authorized Mansha Group representatives before making investment decisions. Mansha Group is not liable for any discrepancies that may arise.

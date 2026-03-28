@@ -53,27 +53,31 @@
 
 /* BUTTON */
 .btn {
-    padding: 0.625em 1.25em;
+    padding: 0.75em 1.5em;
     border: 1px solid #7b2d26;
     border-radius: 50px;
     background: transparent;
     color: #7b2d26;
     cursor: pointer;
     font-size: clamp(0.875rem, 0.8vw + 0.5rem, 1rem);
-
     display: flex;
     align-items: center;
     gap: 0.5em;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    letter-spacing: 0.03em;
 }
 
-/* HOVER */
 .btn:hover {
     background: #7b2d26;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 45, 38, 0.25);
 }
 
 .bottom {
     width: 100%;
+    overflow: hidden;
 }
 
 .bottom img {

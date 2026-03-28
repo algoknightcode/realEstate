@@ -30,7 +30,7 @@
     height: 2.625rem;
 
     border-radius: 50%;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
 
     background: transparent;
     color: #111;
@@ -42,26 +42,35 @@
     justify-content: center;
     align-items: center;
 
-    transition: all 0.2s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .arrowBtn:hover {
     background: #111;
     color: #fff;
     border-color: #111;
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 /* BOTTOM */
 .bottom {
     width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
 }
 
 .bottom img {
     width: 100%;
     height: clamp(20rem, 43vw, 38.4375rem);
     display: block;
-    border-radius: 4px;
+    border-radius: 0.75rem;
     object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.bottom:hover img {
+    transform: scale(1.02);
 }
 
 /* ===== MOBILE ===== */

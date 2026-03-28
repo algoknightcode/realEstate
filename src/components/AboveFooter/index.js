@@ -1,9 +1,11 @@
 import styles from './AboveFooter.module.css';
 import { arrow, aboveFooter } from "../../assets";
+import { useScaleIn } from "../../hooks/useGsap";
 
 const AboveFooter = () =>{
+    const ref = useScaleIn();
     return(
-        <div className={styles.outer}>
+        <div className={styles.outer} ref={ref}>
 
             {/* BACKGROUND IMAGE */}
             <img src={aboveFooter} alt="aboveFooter" className={styles.bg} />

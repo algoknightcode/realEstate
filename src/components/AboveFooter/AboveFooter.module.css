@@ -20,6 +20,11 @@
     object-fit: cover;
 
     border-radius: 1.875rem;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outer:hover .bg {
+    transform: scale(1.02);
 }
 
 /* CONTENT (OVERLAY) */
@@ -71,9 +76,15 @@
 }
 
 /* HOVER */
+.btn {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .btn:hover {
     background: #652828;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(101, 40, 40, 0.35);
 }
 
 /* ===== MOBILE ===== */

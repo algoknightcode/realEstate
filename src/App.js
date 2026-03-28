@@ -16,11 +16,13 @@ function App() {
       <Navbar/>
       <Header1/>
       <Countjs/>
-      <Faq/>
+   
       <Header3/>
-      <Header4/>
+      
       <Header5/>
+      <Header4/>
       <Subheader/>
+         <Faq/>
       <AboveFooter/>
       <Footer/>
     </div>
