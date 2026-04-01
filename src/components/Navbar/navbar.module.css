@@ -23,10 +23,60 @@
     margin-left: 0;
 }
 
+.left a {
+    display: flex;
+    align-items: center;
+}
+
 .left img{
     width: clamp(4rem, 6vw, 5.9375rem);
     height: clamp(3.5rem, 7vw, 4.75rem);
 }
+
+/* NAV LINKS */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.navLink {
+    font-size: clamp(0.875rem, 0.9vw + 0.3rem, 1rem);
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #7b2d26;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover {
+    color: #7b2d26;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navLink.active {
+    color: #7b2d26;
+}
+
+.navLink.active::after {
+    width: 100%;
+}
+
 .right{
     display: flex;
     gap: clamp(1rem, 2.5vw, 2.0625rem);
@@ -44,15 +94,63 @@
     transform: scale(1.15);
 }
 
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.menuToggle svg {
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menuToggle:hover svg {
+    color: #7b2d26;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
     .outer {
         height: auto;
         padding: 0.5rem 1rem;
+        flex-wrap: wrap;
     }
     .left img {
         width: 4rem;
         height: 3.5rem;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        gap: 0;
+        background: #fff;
+        border-top: 1px solid #eee;
+        padding: 0.5rem 0;
+    }
+    .navOpen {
+        display: flex;
+    }
+    .navLink {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+    .navLink::after {
+        display: none;
+    }
+    .navLink.active {
+        background: #f8f5f3;
+    }
+    .menuToggle {
+        display: flex;
+        align-items: center;
     }
     .right {
         gap: 1.25rem;

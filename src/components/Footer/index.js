@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './footer.module.css';
 import { FooterImg, logo } from "../../assets";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
@@ -25,16 +26,16 @@ const Footer = () =>{
                 <div className={styles.middle}>
                     <div>
                         <h4>PROJECTS</h4>
-                        <p>Residential</p>
-                        <p>Commercial</p>
+                        <Link to="/projects"><p>Residential</p></Link>
+                        <Link to="/projects"><p>Commercial</p></Link>
                     </div>
 
                     <div>
                         <h4>OUR STORY</h4>
-                        <p>About Us</p>
+                        <Link to="/about"><p>About Us</p></Link>
                         <p>Blogs</p>
                         <p>FAQ</p>
-                        <p>Contact Us</p>
+                        <Link to="/contact"><p>Contact Us</p></Link>
                     </div>
                 </div>
 

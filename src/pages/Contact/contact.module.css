@@ -1,0 +1,218 @@
+.hero {
+    width: 100%;
+    min-height: clamp(18rem, 40vw, 28rem);
+    background: linear-gradient(135deg, #7b2d26 0%, #4a1a17 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+    top: -10rem;
+    left: -10rem;
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-family: "Georgia", serif;
+    font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: clamp(0.95rem, 1vw + 0.5rem, 1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 36rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* INFO CARDS */
+.contactSection {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+}
+
+.infoCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.infoCard {
+    background: #fff;
+    border-radius: 1rem;
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.infoCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.infoIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7b2d26 0%, #a84040 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.infoCard h3 {
+    font-size: clamp(1rem, 1.1vw + 0.4rem, 1.15rem);
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.5rem 0;
+}
+
+.infoCard p {
+    font-size: clamp(0.85rem, 0.8vw + 0.35rem, 0.95rem);
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* FORM WRAPPER */
+.formWrapper {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.formWrapper h2 {
+    font-family: "Georgia", serif;
+    font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.5rem);
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.5rem 0;
+}
+
+.formSubtitle {
+    font-size: clamp(0.9rem, 0.9vw + 0.4rem, 1.05rem);
+    color: #777;
+    margin: 0 0 clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.row {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 0.75rem;
+    font-size: clamp(0.9rem, 0.9vw + 0.4rem, 1rem);
+    font-family: inherit;
+    color: #333;
+    background: #fafafa;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #7b2d26;
+    box-shadow: 0 0 0 3px rgba(123, 45, 38, 0.08);
+    background: #fff;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #aaa;
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 8rem;
+}
+
+.submitBtn {
+    align-self: flex-start;
+    padding: 0.875em 2.25em;
+    border: none;
+    border-radius: 50px;
+    background: #7b2d26;
+    color: #fff;
+    font-size: clamp(0.9rem, 0.9vw + 0.4rem, 1.05rem);
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitBtn:hover {
+    background: #5e1f1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 45, 38, 0.3);
+}
+
+/* MAP */
+.mapSection {
+    width: 100%;
+    height: clamp(18rem, 35vw, 28rem);
+    background: #eee;
+}
+
+.mapSection iframe {
+    display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .infoCards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .formWrapper {
+        padding: 1.5rem 1.25rem;
+    }
+    .mapSection {
+        height: 16rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .infoCards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,32 +1,28 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Header1 from './components/Header1';
-import Countjs from './components/countjs';
-import Faq from './components/Faq';
-import { Header3 } from './components/Header3';
-import AboveFooter from './components/AboveFooter';
 import Footer from './components/Footer';
-import { Header4 } from './components/Header4';
-import { Subheader } from './components/subheader';
-import { Header5 } from './components/Header5';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className='app'>
-      <Navbar/>
-      <Header1/>
-      <Countjs/>
-   
-      <Header3/>
-      
-      <Header5/>
-      <Header4/>
-      <Subheader/>
-         <Faq/>
-      <AboveFooter/>
-      <Footer/>
-    </div>
-   
+    <BrowserRouter>
+      <div className='app'>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

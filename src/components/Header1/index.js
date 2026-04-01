@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 import { header1 } from "../../assets";
 import { useFadeUp, useScaleIn } from "../../hooks/useGsap";
@@ -20,9 +21,9 @@ const Header1 = () =>{
             <div className={styles.right} ref={rightRef}>
                 <p>with a leading real estate agency</p>
 
-                <button className={styles.btn}>
+                <Link to="/contact" className={styles.btn}>
                     Get consultation →
-                </button>
+                </Link>
             </div>
           </div>
         
