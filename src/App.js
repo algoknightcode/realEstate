@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Properties from './pages/Properties';
+import Team from './pages/Team';
+import Blog from './pages/Blog';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -17,7 +20,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/properties" element={<Properties />} />
           <Route path="/projects" element={<Services />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

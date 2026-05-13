@@ -1,0 +1,116 @@
+.propertiesContainer {
+    background: #f8f5f3;
+    min-height: 100vh;
+}
+
+.hero {
+    width: 100%;
+    min-height: clamp(15rem, 30vw, 22rem);
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 3rem 1.5rem;
+}
+
+.hero h1 {
+    font-family: "Georgia", serif;
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+}
+
+.gridSection {
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .imageWrapper img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #7b2d26;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #7b2d26;
+    margin-bottom: 0.75rem;
+}
+
+.address {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #555;
+}

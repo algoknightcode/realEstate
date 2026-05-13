@@ -8,7 +8,10 @@ import { FaPhoneAlt, FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 const navLinks = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
+    { to: "/properties", label: "Properties" },
     { to: "/projects", label: "Projects" },
+    { to: "/team", label: "Team" },
+    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
 ];
 

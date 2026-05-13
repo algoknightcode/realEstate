@@ -1,0 +1,111 @@
+.blogContainer {
+    background: #f8f5f3;
+    min-height: 100vh;
+}
+
+.hero {
+    width: 100%;
+    min-height: clamp(15rem, 30vw, 22rem);
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 3rem 1.5rem;
+}
+
+.hero h1 {
+    font-family: "Georgia", serif;
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+}
+
+.gridSection {
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    height: 240px;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .imageWrapper img {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 2rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.content h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.readMore {
+    background: none;
+    border: none;
+    color: #7b2d26;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.readMore:hover {
+    color: #5e1f1a;
+}
